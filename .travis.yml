@@ -1,5 +1,5 @@
 language: cpp
-dist: trusty
+dist: precise
 
 branches:
   except:
@@ -14,12 +14,12 @@ matrix:
     - os: linux
       compiler: gcc
       env:
-        - GCC_VERSION=4.8
+        - GCC_VERSION=4.6
         - CMAKE_OPTIONS="-DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-Wno-maybe-uninitialized"
       addons:
         apt:
           packages:
-            - g++-4.8
+            - g++-4.6
             - libsdl2-dev
             - libgtk2.0-dev
 
