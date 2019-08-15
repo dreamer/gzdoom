@@ -1,5 +1,5 @@
 language: cpp
-dist: xenial
+dist: precise
 
 branches:
   except:
@@ -10,23 +10,6 @@ git:
 
 matrix:
   include:
-    - os: osx
-      osx_image: xcode8
-      env:
-        - CMAKE_OPTIONS="-DCMAKE_BUILD_TYPE=Debug -DCMAKE_OSX_DEPLOYMENT_TARGET=10.9"
-
-    - os: osx
-      osx_image: xcode10.2
-      env:
-        - CMAKE_OPTIONS="-DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET=10.9"
-
-    - os: windows
-      env:
-        - CMAKE_OPTIONS="-A Win32"
-
-    - os: windows
-      env:
-        - CMAKE_OPTIONS="-A x64"
 
     - os: linux
       compiler: gcc
